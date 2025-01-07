@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popular Movies</title>
+</head>
+<body>
+    <h1>Popular Movies</h1>
+    <ul>
+        {% for movie in movies %}
+            <li>
+                <a href="{% url 'movie_detail' movie.id %}">
+                    <img src="{{ movie.poster_url }}" alt="{{ movie.title }}" style="width:150px; height:auto;">
+                    <p>{{ movie.title }}</p>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

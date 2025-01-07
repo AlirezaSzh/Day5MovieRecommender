@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ movie.title }}</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .grid-item {
+            text-align: center;
+        }
+        img {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }}" style="width:300px; height:auto;">
+    <p>{{ movie.overview }}</p>
+    <h2>Recommendations</h2>
+    <div class="grid-container">
+        {% for rec in recommendations %}
+            <div class="grid-item">
+                <a href="{% url 'movie_detail' rec.id %}">
+                    <img src="https://image.tmdb.org/t/p/w500{{ rec.poster_path }}" alt="{{ rec.title }}">
+                    <p>{{ rec.title }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
