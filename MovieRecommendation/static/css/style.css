@@ -1,4 +1,4 @@
-/* 🟢 تنظیمات کلی */
+/* Global Settings */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
@@ -8,14 +8,14 @@ body {
     text-align: center;
 }
 
-/* 🟡 استایل هدر */
+/* Header Styling */
 h1 {
     font-size: 2.5rem;
     margin: 20px 0;
     color: #f4c10f;
 }
 
-/* 🔵 لینک‌ها */
+/* Links */
 a {
     text-decoration: none;
     color: #f4c10f;
@@ -25,7 +25,7 @@ a:hover {
     color: #ffeb3b;
 }
 
-/* 🟣 استایل تصاویر */
+/* Image Styling */
 img {
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
@@ -36,7 +36,7 @@ img:hover {
     transform: scale(1.1);
 }
 
-/* === 🏠 صفحه اصلی (لیست فیلم‌ها) === */
+/* Home Page */
 .movie-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -56,7 +56,7 @@ img:hover {
     background-color: #333;
 }
 
-/* === 🎬 صفحه جزئیات فیلم (detail.html) === */
+/* Movie Details Page */
 .movie-details {
     max-width: 800px;
     margin: 20px auto;
@@ -80,7 +80,7 @@ img:hover {
     color: #ddd;
 }
 
-/* استایل پیشنهادات فیلم (فیلم‌های مشابه) */
+/* Recommended Movies */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
